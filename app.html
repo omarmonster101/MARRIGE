@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>منصة ميثاق - نموذج تشغيلي متكامل</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html">ميثاق</a>
+    <nav>
+      <a href="#registration">التسجيل</a>
+      <a href="#profile">الملف</a>
+      <a href="#search">البحث</a>
+      <a href="#dashboard">لوحة المستخدم</a>
+      <a href="#guardian">الولي</a>
+      <a href="#admin">الإدارة</a>
+      <a href="#subscriptions">الاشتراكات</a>
+      <a href="#security">الأمان</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section intro-card card">
+    <h1>النموذج التشغيلي الكامل لمنصة زواج إسلامي</h1>
+    <p class="muted">نسخة محسّنة من واجهة MVP لتغطية أكبر للمواصفات: الصفحات العامة، التسجيل، الملف، البحث، المحادثات، نظام الولي، الإدارة، الاشتراكات، الأمان، والتكاملات.</p>
+    <div class="pill-row">
+      <span class="pill">RTL</span>
+      <span class="pill">خصوصية عالية</span>
+      <span class="pill">توثيق متعدد</span>
+      <span class="pill">دور الولي</span>
+      <span class="pill">لوحات تشغيل</span>
+    </div>
+  </section>
+
+  <section id="registration" class="card section">
+    <h2>1) التسجيل وإنشاء الحساب</h2>
+    <div class="tabs" role="tablist" aria-label="خطوات التسجيل">
+      <button class="tab active" data-tab="register-basic" role="tab" aria-selected="true">الخطوة 1: معلومات الدخول</button>
+      <button class="tab" data-tab="register-identity" role="tab" aria-selected="false">الخطوة 2: البيانات الأساسية</button>
+      <button class="tab" data-tab="register-religion" role="tab" aria-selected="false">الخطوة 3: الدينية</button>
+      <button class="tab" data-tab="register-verify" role="tab" aria-selected="false">الخطوة 4: التفعيل</button>
+    </div>
+
+    <div class="tab-content active" id="register-basic">
+      <div class="form-grid">
+        <label>نوع الحساب<select><option>أبحث عن زوجة (رجل)</option><option>أبحث عن زوج (امرأة)</option><option>ولي أمر</option><option>وسيط/خاطبة</option></select></label>
+        <label>البريد الإلكتروني<input type="email"></label>
+        <label>رقم الجوال<input type="tel"></label>
+        <label>كلمة المرور القوية<input type="password"></label>
+        <label>تأكيد كلمة المرور<input type="password"></label>
+        <label class="span-2"><input type="checkbox"> أوافق على الشروط وسياسة الخصوصية</label>
+      </div>
+    </div>
+
+    <div class="tab-content" id="register-identity">
+      <div class="form-grid">
+        <label>الاسم الأول (للظهور)<input type="text"></label>
+        <label>الاسم الكامل (للتحقق فقط)<input type="text"></label>
+        <label>الجنس<select><option>ذكر</option><option>أنثى</option></select></label>
+        <label>تاريخ الميلاد<input type="date"></label>
+        <label>الجنسية<input type="text"></label>
+        <label>الدولة<input type="text"></label>
+        <label>المدينة<input type="text"></label>
+      </div>
+    </div>
+
+    <div class="tab-content" id="register-religion">
+      <div class="form-grid">
+        <label>المذهب<select><option>سني</option><option>شيعي</option><option>أخرى</option></select></label>
+        <label>الالتزام الديني<select><option>ملتزم جدًا</option><option>ملتزم</option><option>متوسط</option><option>قليل الالتزام</option></select></label>
+        <label>الصلاة<select><option>أصلي الخمس</option><option>أحيانًا</option><option>لا أصلي</option></select></label>
+        <label>حفظ القرآن<select><option>حافظ كامل</option><option>أجزاء</option><option>لا</option></select></label>
+        <label>اللحية (للرجال)<select><option>نعم</option><option>لا</option><option>أخطط</option></select></label>
+        <label>الحجاب (للنساء)<select><option>نقاب</option><option>حجاب كامل</option><option>حجاب عادي</option><option>لا</option></select></label>
+      </div>
+    </div>
+
+    <div class="tab-content" id="register-verify">
+      <ul>
+        <li>تفعيل البريد الإلكتروني عبر رابط آمن.</li>
+        <li>تفعيل الجوال بكود 6 أرقام مع إعادة الإرسال.</li>
+        <li>رسالة ترحيب بعد نجاح التفعيل.</li>
+        <li>تسجيل سريع عبر Google/Apple (اختياري) مع استكمال الملف لاحقًا.</li>
+      </ul>
+      <button class="btn">إنشاء الحساب</button>
+    </div>
+  </section>
+
+  <section id="profile" class="card section">
+    <h2>2) إكمال الملف الشخصي (Personal + Religious + Social)</h2>
+    <div class="form-grid">
+      <label>الطول (سم)<input type="number"></label>
+      <label>الوزن (اختياري)<input type="number"></label>
+      <label>لون البشرة<select><option>فاتح</option><option>حنطي</option><option>سمراء</option><option>داكن</option></select></label>
+      <label>بنية الجسم<select><option>نحيف</option><option>متوسط</option><option>رياضي</option><option>ممتلئ</option></select></label>
+      <label>الحالة الاجتماعية<select><option>أعزب/عزباء</option><option>مطلق/ة</option><option>أرمل/ة</option></select></label>
+      <label>هل لديك أطفال<select><option>لا</option><option>نعم</option></select></label>
+      <label>التدخين<select><option>لا أدخن</option><option>أحيانًا</option><option>مدخن</option></select></label>
+      <label>المستوى التعليمي<select><option>ثانوية</option><option>دبلوم</option><option>بكالوريوس</option><option>ماجستير</option><option>دكتوراه</option></select></label>
+      <label>المهنة<input type="text"></label>
+      <label>القطاع<select><option>حكومي</option><option>خاص</option><option>عسكري</option><option>حر</option><option>طالب</option><option>لا أعمل</option></select></label>
+      <label>نوع السكن الحالي<select><option>مع الأهل</option><option>مستقل</option><option>مشترك</option></select></label>
+      <label>الاستعداد للانتقال<select><option>نعم</option><option>لا</option><option>في نفس البلد</option><option>في أي مكان</option></select></label>
+      <label class="span-2">عني (200-500 كلمة)<textarea rows="5" placeholder="من أنا؟ ما الذي أبحث عنه؟"></textarea></label>
+    </div>
+
+    <h3>الصور والخصوصية</h3>
+    <div class="form-grid">
+      <label>خصوصية الصور<select><option>عامة</option><option>للأعضاء المسجلين فقط</option><option>بطلب</option><option>للولي فقط</option><option>محمية بكلمة سر</option></select></label>
+      <label>صورة رئيسية<input type="file"></label>
+      <label class="span-2">معرض صور إضافي (حتى 6 صور)<input type="file" multiple></label>
+    </div>
+
+    <h3>التحقق</h3>
+    <div class="steps cols-3">
+      <article class="card"><h4>تحقق إلزامي</h4><p>بريد + جوال + هوية وطنية/جواز + سيلفي بكود.</p></article>
+      <article class="card"><h4>تحقق اختياري</h4><p>العمل، التعليم، والفيديو لتعزيز الثقة.</p></article>
+      <article class="card"><h4>شارات الملف</h4><p>✓ هوية موثقة • ✓✓ فيديو • ⭐ عمل • 💰 دخل.</p></article>
+    </div>
+  </section>
+
+  <section id="search" class="card section">
+    <h2>3) البحث والاستكشاف والتوافق</h2>
+    <div class="form-grid">
+      <label>العمر من<input type="number" value="22"></label>
+      <label>إلى<input type="number" value="35"></label>
+      <label>الدولة<select><option>الأردن</option><option>السعودية</option><option>مصر</option><option>المغرب</option></select></label>
+      <label>الحالة الاجتماعية<select><option>أعزب/عزباء</option><option>مطلق/ة</option><option>أرمل/ة</option></select></label>
+      <label>الالتزام الديني<select><option>ملتزم جدًا</option><option>ملتزم</option><option>متوسط</option></select></label>
+      <label>الحجاب (للنساء)<select><option>لا فرق</option><option>نقاب</option><option>حجاب كامل</option><option>حجاب</option></select></label>
+      <label>اللحية (للرجال)<select><option>لا فرق</option><option>نعم</option><option>لا</option></select></label>
+      <label>موثق فقط؟<select><option>نعم</option><option>الكل</option></select></label>
+      <label>الترتيب<select><option>التوافق</option><option>الأحدث</option><option>الأنشط</option><option>الأقرب</option></select></label>
+      <button class="btn" type="button">بحث</button>
+    </div>
+
+    <h3>نتائج البحث (بطاقات)</h3>
+    <div class="steps cols-3">
+      <article class="card"><h4>أحمد، 28 ✓</h4><p>عمّان • مهندس برمجيات • بكالوريوس</p><p class="match">توافق 85%</p></article>
+      <article class="card"><h4>خالد، 31 ✓</h4><p>جدة • طبيب • ماجستير</p><p class="match">توافق 81%</p></article>
+      <article class="card"><h4>يوسف، 27</h4><p>القاهرة • محاسب • بكالوريوس</p><p class="match">توافق 76%</p></article>
+    </div>
+
+    <h3>معادلة التوافق</h3>
+    <div class="progress-grid">
+      <div><span>التوافق الديني (40%)</span><div class="progress"><i style="width:88%"></i></div></div>
+      <div><span>التعليم/المهنة (20%)</span><div class="progress"><i style="width:74%"></i></div></div>
+      <div><span>الاهتمامات المشتركة (15%)</span><div class="progress"><i style="width:65%"></i></div></div>
+      <div><span>الموقع الجغرافي (10%)</span><div class="progress"><i style="width:80%"></i></div></div>
+      <div><span>الأهداف الزوجية (15%)</span><div class="progress"><i style="width:70%"></i></div></div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="card section">
+    <h2>4) لوحة تحكم المستخدم</h2>
+    <div class="kpi-grid">
+      <article class="kpi"><strong>17</strong><span>اهتمامات مرسلة</span></article>
+      <article class="kpi"><strong>9</strong><span>اهتمامات مستلمة</span></article>
+      <article class="kpi"><strong>4</strong><span>رسائل غير مقروءة</span></article>
+      <article class="kpi"><strong>112</strong><span>زيارات الملف</span></article>
+      <article class="kpi"><strong>18</strong><span>مضافون للمفضلة</span></article>
+    </div>
+    <div class="steps cols-2">
+      <article class="card"><h3>الاهتمامات</h3><p>إرسال/استلام/قبول/رفض/متبادلة مع فلترة الحالة.</p></article>
+      <article class="card"><h3>الرسائل</h3><p>صندوق وارد، مؤرشف، إشعار يكتب الآن، حظر/بلاغ.</p></article>
+      <article class="card"><h3>البحوث المحفوظة</h3><p>حفظ 5 (مجاني) إلى 20 (مدفوع) مع تنبيهات.</p></article>
+      <article class="card"><h3>الإعدادات</h3><p>2FA، خصوصية الرؤية والصور، إخفاء آخر ظهور، حذف الحساب.</p></article>
+    </div>
+  </section>
+
+  <section id="guardian" class="card section">
+    <h2>5) نظام الولي/الوصي</h2>
+    <div class="steps cols-3">
+      <article class="card"><h3>تسجيل ولي</h3><p>إدخال بيانات الولي وعلاقته بالمولية وموافقة المولية على الربط.</p></article>
+      <article class="card"><h3>إدارة الاهتمامات</h3><p>استلام، مراجعة، قبول/رفض بالنيابة أو بالشراكة مع المولية.</p></article>
+      <article class="card"><h3>Wali Chat</h3><p>نسخة تلقائية لكل رسالة أو وضع الموافقة قبل الإرسال.</p></article>
+    </div>
+    <h3>مستويات التحكم</h3>
+    <table class="table">
+      <thead><tr><th>الوضع</th><th>الوصف</th></tr></thead>
+      <tbody>
+        <tr><td>تحكم كامل</td><td>الولي يدير كل الاهتمامات والرسائل بالكامل.</td></tr>
+        <tr><td>تحكم مشترك</td><td>الولي والمولية يتخذان القرار معًا.</td></tr>
+        <tr><td>إشراف فقط</td><td>المولية تدير الحساب والولي يتابع وينبّه.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="admin" class="card section">
+    <h2>6) لوحة تحكم الإدارة</h2>
+    <div class="kpi-grid">
+      <article class="kpi"><strong>125k</strong><span>إجمالي الأعضاء</span></article>
+      <article class="kpi"><strong>61%</strong><span>حسابات موثقة</span></article>
+      <article class="kpi"><strong>8,400</strong><span>زيجات ناجحة</span></article>
+      <article class="kpi"><strong>$89k</strong><span>إيراد شهري</span></article>
+      <article class="kpi"><strong>342</strong><span>بلاغ جديد</span></article>
+    </div>
+    <div class="steps cols-3">
+      <article class="card"><h3>إدارة الأعضاء</h3><p>بحث/فلترة/تعطيل/حظر/توثيق/تعديل الاشتراك.</p></article>
+      <article class="card"><h3>مراجعة المحتوى</h3><p>صور ونصوص ووثائق بهوية عمل واضحة + قرارات المراجعة.</p></article>
+      <article class="card"><h3>إدارة البلاغات</h3><p>تحرش/احتيال/spam مع سجل إجراءات وإشعار للمبلِّغ.</p></article>
+      <article class="card"><h3>الدعم الفني</h3><p>نظام تذاكر، أولويات، تصعيد، قاعدة معرفة.</p></article>
+      <article class="card"><h3>الصلاحيات</h3><p>Super Admin / Admin / Moderator / Support.</p></article>
+      <article class="card"><h3>النسخ الاحتياطي</h3><p>Backup تلقائي + استعادة كاملة/جزئية + تشفير النسخ.</p></article>
+    </div>
+  </section>
+
+  <section id="subscriptions" class="card section">
+    <h2>7) الاشتراكات والدفع</h2>
+    <div class="pricing-grid">
+      <article class="card"><h3>مجاني</h3><p class="price">$0</p><ul><li>بحث أساسي</li><li>5 اهتمامات/شهر</li><li>3 رسائل/يوم</li></ul></article>
+      <article class="card"><h3>فضي</h3><p class="price">$9.99 / شهر</p><ul><li>30 اهتمام/شهر</li><li>رسائل غير محدودة</li><li>رؤية زوار الملف</li></ul></article>
+      <article class="card featured"><h3>ذهبي</h3><p class="price">$29.99 / 3 أشهر</p><ul><li>اهتمامات غير محدودة</li><li>بحث متقدم</li><li>دعم أولوية</li></ul></article>
+      <article class="card"><h3>بلاتيني</h3><p class="price">$89 / سنة</p><ul><li>توثيق مجاني</li><li>استشارة زواج</li><li>ميزات VIP</li></ul></article>
+    </div>
+    <p class="muted">طرق دفع: بطاقات ائتمان، PayPal، ودفع محلي (JoMoPay / Fawry / STC Pay...).</p>
+  </section>
+
+  <section id="security" class="card section">
+    <h2>8) الخصوصية، الأمان، والتكاملات</h2>
+    <div class="steps cols-3">
+      <article class="card"><h3>الحماية التقنية</h3><p>HTTPS، تشفير بيانات، Hash + Salt لكلمات المرور، Rate Limiting.</p></article>
+      <article class="card"><h3>سلامة الحساب</h3><p>2FA، جلسات آمنة، تنبيه دخول جديد، تعليق تلقائي عند نشاط مشبوه.</p></article>
+      <article class="card"><h3>الامتثال</h3><p>حقوق GDPR: الوصول، التعديل، التصدير، الحذف، إشعار الانتهاك.</p></article>
+    </div>
+    <h3>تكاملات رئيسية</h3>
+    <div class="pill-row">
+      <span class="pill">Stripe / PayPal</span><span class="pill">Twilio</span><span class="pill">SendGrid</span>
+      <span class="pill">AWS S3</span><span class="pill">Zoom / Jitsi</span><span class="pill">Onfido</span>
+      <span class="pill">Elasticsearch</span><span class="pill">Google Analytics</span><span class="pill">Cloudinary</span>
+    </div>
+  </section>
+
+  <section class="card section">
+    <h2>9) سيناريوهات تشغيل مختصرة (User Flows)</h2>
+    <ol class="timeline">
+      <li><strong>تسجيل عضو جديد:</strong> حساب → تفعيل SMS/Email → إكمال ملف → مراجعة صورة → ظهور في البحث.</li>
+      <li><strong>تسجيل عبر ولي:</strong> ربط ولي + موافقة مولية → ضبط صلاحيات التحكم → بدء التصفح والتواصل.</li>
+      <li><strong>اهتمام ومحادثة:</strong> إرسال اهتمام → قبول متبادل → بدء chat (مع ولي عند الحاجة).</li>
+      <li><strong>بلاغ:</strong> إبلاغ عن إساءة → مراجعة الإدارة → إجراء (تحذير/حظر) → إشعار للمبلّغ.</li>
+      <li><strong>ترقية اشتراك:</strong> تجاوز حد مجاني → دفع آمن → تفعيل المزايا فورًا.</li>
+    </ol>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
